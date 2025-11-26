@@ -1,7 +1,7 @@
-LearnHub: Serverless Learning Management System (LMS)
+# LearnHub: Serverless Learning Management System (LMS)
 This project is a scalable, cloud-native Learning Management System designed to handle student/instructor registration, course delivery, and material access. It leverages a Serverless Architecture on AWS to ensure high availability and low operational costs.
 
-🏗️ Architecture
+# 🏗️ Architecture
 The application follows a decoupled serverless pattern:
 
 1.	Frontend: Hosted statically on S3 (Private) and served via CloudFront (CDN) for low latency and SSL termination.
@@ -18,7 +18,8 @@ The application follows a decoupled serverless pattern:
 
 7.	IAM strictly manages service-to-service permissions.
 ________________________________________
-🛠️ Tech Stack
+
+# 🛠️ Tech Stack:
 Frontend
 •	Framework: React.js
 •	Build Tool: Vite
@@ -33,12 +34,12 @@ Backend (AWS Serverless)
 •	Communication: Amazon SES (Simple Email Service)
 ________________________________________
 
-📂 Project Structure
+# 📂 Project Structure
 Check the GitHub repo for the project structure. 
 Access it here : GitHub repo link
 ________________________________________
 
-🚀 Getting Started
+# 🚀 Getting Started
 
 Prerequisites
 •	Node.js (v18.x or later)
@@ -76,7 +77,7 @@ npm install
 npm run dev
 ________________________________________
 
-☁️ Deployment Guide
+# ☁️ Deployment Guide
 Infrastructure Setup
 •	S3 & CloudFront: The frontend bucket is Private. Access is granted strictly through CloudFront using an Origin Access Identity (OAI) or Origin Access Control (OAC).
 
@@ -87,7 +88,7 @@ Infrastructure Setup
 Deployment locally : npm run dev
 ________________________________________
 
-📧 Email & MFA (SES)
+# 📧 Email & MFA (SES)
 This system uses AWS SES for authentication challenges.
 
 •	Flow: When a user logs in, Lambda generates a code, stores it in DynamoDB (with TTL), and calls SES to email the user.
